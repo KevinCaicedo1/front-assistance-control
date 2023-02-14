@@ -1,0 +1,30 @@
+<!-- Contenedor imagen camara -->
+<div [ngClass]="!isAccepted?'dual-box':'contain-camera'" >
+    <div [ngClass]="!isAccepted?'parent':''">
+        <div *ngIf="!isAccepted" class="div1">
+            <div class="camera">
+                <img [src]="videoStreamReturned" alt="camera"
+                width="70%" />
+            </div>
+        </div>
+        <div *ngIf="!isAccepted" class="div2">
+            <app-card-model></app-card-model>
+
+        </div>
+        <div *ngIf="isAccepted" class="contain-init">
+            <div class="contain-text">
+                <h1>Agregar Rostro</h1>
+                <p>Para registrar una persona, primero ingrese la cédula.</p>
+            </div>
+            <!-- Formulario para ingreso de cedula -->
+            <form class="form" [formGroup]="form">
+                <mat-form-field class="form-field" appearance="fill" color="accent">
+                    <mat-label>Ingrese la cédula</mat-label>
+                    <input matInput placeholder="Cédula" formControlName="cedula">
+                </mat-form-field>
+                <button mat-raised-button color="accent" type="submit" [disabled]="form.invalid"
+                    (click)="onAccept()">Ingresar</button>
+            </form>
+        </div>
+    </div>
+</div>

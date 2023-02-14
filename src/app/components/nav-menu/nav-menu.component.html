@@ -1,0 +1,46 @@
+<nav class="nav">
+    <ul >
+        <li  class="list active" (click)="addActiveClass(0)">
+            <a routerLink="/inicio">
+                <span class="icon">
+                    <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="home">home</mat-icon>
+                </span>
+                <span class="text">Inicio</span>
+            </a>
+        </li>
+        <li class="list" (click)="addActiveClass(1)">
+            <a routerLink="/agregar-rostro">
+                <span class="icon">
+                    <mat-icon>add</mat-icon>
+                </span>
+                <span class="text">Agregar</span>
+            </a>
+        </li>
+        <li class="list" (click)="addActiveClass(2)">
+            <a routerLink="/reporte">
+                <span class="icon">
+                    <mat-icon>list</mat-icon>
+                </span>
+                <span class="text">Reporte</span>
+            </a>
+        </li>
+        <li class="list" (click)="addActiveClass(3)">
+            <a routerLink="/marcar-asistencia">
+                <span class="icon">
+                    <mat-icon>camera</mat-icon>
+                </span>
+                <span class="text">Asistencia</span>
+            </a>
+        </li>
+        <li class="list" (click)="addActiveClass(4)">
+            <a routerLink="/usuarios">
+                <span class="icon">
+                    <mat-icon>person</mat-icon>
+                </span>
+                <span class="text">Usuario</span>
+            </a>
+        </li>
+        <div class="indicator"></div>
+    </ul>
+</nav>
+
