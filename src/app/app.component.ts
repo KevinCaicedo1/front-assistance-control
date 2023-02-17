@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { RoutePanelService } from './services/routes.services';
+// import { RoutePanelService } from './services/routes.services';
 
 @Component({
   selector: 'app-root',
@@ -9,10 +9,7 @@ import { RoutePanelService } from './services/routes.services';
 export class AppComponent {
   title = 'asistance-control';
 
-  constructor(private routePanel: RoutePanelService) {
+  constructor() {
   }
 
-  getRouter() {
-    return this.routePanel.data;
-  }
 }

@@ -10,7 +10,6 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
-import { RoutePanelService } from './services/routes.services';
 import { CardModelComponent } from './molecule/card-model/card-model.component';
 import { HomeComponent } from './components/home/home.component';
 import { ReportComponent } from './components/report/report.component';
@@ -45,7 +44,6 @@ import { UserReportComponent } from './components/user-report/user-report.compon
     BrowserAnimationsModule
   ],
   providers: [
-    RoutePanelService
   ],
   bootstrap: [AppComponent]
 })

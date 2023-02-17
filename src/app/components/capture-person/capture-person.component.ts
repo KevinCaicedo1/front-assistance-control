@@ -71,6 +71,10 @@ export class CapturePersonComponent implements OnInit {
     }
     );
   }
+  // al cambiar de componente se cierra la camara
+  ngOnDestroy(): void {
+    this.videoStream.getTracks()[0].stop();
+  }
 
 
 }

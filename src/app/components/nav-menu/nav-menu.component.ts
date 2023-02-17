@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { RoutePanelService } from 'src/app/services/routes.services';
+// import { RoutePanelService } from 'src/app/services/routes.services';
 
 @Component({
   selector: 'app-nav-menu',
@@ -15,6 +15,7 @@ export class NavMenuComponent implements OnInit {
     { id: 3, name: 'Assist', link: '/marcar-asistencia' },
     { id: 4, name: 'Users', link: '/usuarios' }];
 
+    data: number | undefined;
   addActiveClass(number: number) {
     this.data = number;
     const menuItems = document.querySelectorAll('.list');
@@ -23,23 +24,12 @@ export class NavMenuComponent implements OnInit {
     });
     menuItems[number].classList.add('active');
   }
-  selectRoute: number;
+  selectRoute: number | undefined;
 
-  constructor(private routePanel: RoutePanelService) {
-    this.selectRoute = this.data;
+  constructor() {
 
   }
 
-
-
-  get data(): number {
-    return this.routePanel.data;
-  }
-
-  set data(val: number) {
-    this.routePanel.data = val;
-    this.selectRoute = val;
-  }
 
   ngOnInit(): void {
     let location = window.location.href;
